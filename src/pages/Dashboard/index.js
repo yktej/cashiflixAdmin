@@ -62,20 +62,20 @@ class Dashboard extends Component {
 
                         <Row>
                             {/* sources */}
-                            <Sources/>
+                            {process.env.REACT_APP_HIDE_UNWANTED &&   <Sources/> }
 
                             {/* recent activity */}
-                            <RecentlyActivity/>
+                            {process.env.REACT_APP_HIDE_UNWANTED &&   <RecentlyActivity/> }
 
                             {/* revenue by locations */}
-                            <RevenueByLocations/>
+                            {process.env.REACT_APP_HIDE_UNWANTED &&  <RevenueByLocations/> }
 
                         </Row>
                         
 
                         <Row>
                             {/* chat box */}
-                            <ChatBox/>
+                        {process.env.REACT_APP_HIDE_UNWANTED && <ChatBox/> }
 
                             {/* latest transactions */}
                             <LatestTransactions/>
